@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var numero = prompt ("Introduce un numero entero.");
+        var num = new Number(numero);
+        while (num <= 0){
+            var num = prompt ("Introduce un numero entero.");
+        }
+        document.write("El valor exponencial es: " + num.toExponential() + "<br>");
+        document.write("El número con 4 decimales: " + num.toFixed(4) + "<br>");
+        document.write("El número en binario: " + num.toString(2) + "<br>");
+        document.write("El número en octal: " + num.toString(8) + "<br>");
+        document.write("El número en hexadecimal es: " + num.toString(16) + "<br>");
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 6</h1>
+</body>
+</html>

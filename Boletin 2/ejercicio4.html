@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var opcion = prompt ("Introduce una opción del 1 al 4;");
+            while(opcion <= 0 || opcion > 4){
+                alert("Error, introduzca una opción del 1 al 4");
+                var opcion = prompt ("Introduce una opción del 1 al 4;");
+            }
+            
+            if (opcion == 1){
+                alert("Ha elegido la opción 'Potencia'");
+                var base = prompt("Introduzca la base.");
+                var exponente = prompt("Introduzca el exponente.");
+                document.write("El resultado es: " + Math.pow(base, exponente));    
+                }
+            else if(opcion == 2){
+                alert("Ha elegido la opción 'Raiz'");
+                var noNegativo = prompt("Introduzca un número no negativo.");
+                while(noNegativo < 0){
+                    var noNegativo = prompt("Introduzca un número no negativo.");
+                }   
+                document.write("El resultado es: " + Math.sqrt(noNegativo));     
+            }
+            else if(opcion == 3){
+                alert("Ha elegido la opción 'Redondeo'");
+                var redondeo = prompt("Introduzca un número decimal.");
+                document.write("El redondeo mas proximo es: " + Math.round(redondeo));
+            }
+            else{
+                alert("Ha elegido la opción 'Trigonometría'");
+                var trigonometria = prompt("Introduzca un ángulo entre 0 y 360");
+                while(trigonometria < 0 || trigonometria >360){
+                    var trigonometria = prompt("Introduzca un ángulo entre 0 y 360");
+                }
+                document.write("El seno de " + trigonometria + " es: " + Math.sin(trigonometria) +"<br>");
+                document.write("El coseno de " + trigonometria + " es: " + Math.cos(trigonometria) +"<br>");
+                document.write("El tangente de " + trigonometria + " es: " + Math.tan(trigonometria) +"<br>");
+            }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    
+</body>
+</html>

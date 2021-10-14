@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var opcion = prompt ("Introduce la forma en la que te gustaria ver la fecha: 1-(dd/mm/yy), 2-(dia, mes, año), 3-(day, month, year)");
+        var fechaHoy = new Date();
+
+        const dias = ['lunes','martes','miercoles','jueves','viernes', 'sabado', 'domingo'];
+        var nombreDia = dias[fechaHoy.getDay()- 1];
+
+        const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        var nombreMes = meses[fechaHoy.getMonth()];
+
+        const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+        var nameDay = days[fechaHoy.getDay() - 1];
+
+        const month = ['January','February','March','April','May','June','July','August','September','October','November', 'December'];
+        var nameMonth = month[fechaHoy.getMonth()];
+
+        if (opcion == 1){
+            document.write(fechaHoy.getDate()+'/'+(fechaHoy.getMonth()+1)+'/'+fechaHoy.getFullYear());
+        }
+        else if (opcion == 2){
+            document.write(nombreDia+ ', '+ fechaHoy.getDate() + ' de ' + nombreMes + ' de ' + fechaHoy.getFullYear());
+        }
+        else{
+            document.write(nameDay+ ', ' + nameMonth + ' ' + fechaHoy.getDate() + ' , ' + fechaHoy.getFullYear());
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+</body>
+</html>

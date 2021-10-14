@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var opcion = prompt ("Introduce la forma en la que te gustaria ver la hora: 1-(hh:min:sec), 2-(hh:min PM o AM)");
+        var hoy = new Date();
+        var hour = hoy.getHours();
+        var min = hoy.getMinutes();
+        var sec = hoy.getSeconds();
+
+        if (opcion == 1 && sec <= '9' && min <= '9'){
+            document.write(hoy.getHours() + ':0' + hoy.getMinutes() + ':0' + hoy.getSeconds());
+        }
+        else if(opcion == 1 && sec <= '9' && min >= '10'){
+            document.write(hoy.getHours() + ':' + hoy.getMinutes() + ':0' + hoy.getSeconds());
+        }
+        else if(opcion == 1 && sec >= '10' && min <= '9'){
+            document.write(hoy.getHours() + ':0' + hoy.getMinutes() + ':' + hoy.getSeconds());
+        }
+        else if(opcion == 1){
+            document.write(hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds());
+        }
+        else if (opcion == 2 && hour <= '12' && sec <='9' && min <= '9'){
+            document.write(hoy.getHours() + ':0' + hoy.getMinutes() + ':0' + hoy.getSeconds()+' AM'); 
+        }
+        else if(opcion == 2 && hour <= '12' && sec <= '9' && min >= '10'){
+            document.write(hoy.getHours() + ':' + hoy.getMinutes() + ':0' + hoy.getSeconds()+' AM');
+        }
+        else if(opcion == 2 && hour <= '12' && sec >= '10' && min <= '9'){
+            document.write(hoy.getHours() + ':0' + hoy.getMinutes() + ':' + hoy.getSeconds()+' AM');
+        }
+        else if (opcion == 2 && hour > '12' && sec <='9' && min <= '9'){
+            document.write((hoy.getHours()-12) + ':0' + hoy.getMinutes() + ':0' + hoy.getSeconds()+' PM'); 
+        }
+        else if(opcion == 2 && hour > '12' && sec <= '9' && min >= '10'){
+            document.write((hoy.getHours()-12) + ':' + hoy.getMinutes() + ':0' + hoy.getSeconds()+' PM');
+        }
+        else if(opcion == 2 && hour > '12' && sec >= '10' && min <= '9'){
+            document.write((hoy.getHours()-12) + ':0' + hoy.getMinutes() + ':' + hoy.getSeconds()+' PM');
+        }
+        else if (opcion == 2 && hour < '12'){
+            document.write(hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds()+' PM');
+        }
+        else{
+            document.write((hoy.getHours()-12) + ':' + hoy.getMinutes() + ':' + hoy.getSeconds()+' AM');
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+</body>
+</html>

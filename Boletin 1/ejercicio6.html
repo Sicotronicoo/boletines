@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        for(i=9; i<22; i++){
+            for(minutos=0; minutos<=55; minutos+=5){
+                if(i==21 && minutos == 5){
+                    exit;
+                }
+                else if(minutos == 0){
+                    document.write(i,":","0"+minutos,"<br>")
+                }
+                else if(minutos == 5){
+                    document.write(i,":","0"+minutos,"<br>")
+                }
+                else{
+                    document.write(i,":",+minutos, "<br>");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Creacion del html-->
+    <h1>Ejercicio 6</h1>
+</body>
+</html>

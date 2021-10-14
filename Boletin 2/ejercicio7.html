@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var nombre = prompt ("Introduce tu nombre completo.");
+        var resultado = nombre.split(" ");
+        var nombre1 = resultado[0].length;
+        var nombre2 = resultado[1].length;
+        var nombre3 = resultado[2].length;
+
+        document.write("En mayusculas: " + nombre.toUpperCase() + "<br>" + " En minusculas: " + nombre.toLowerCase() + "<br>");
+        document.write("El total de caracteres es: " + (nombre1 + nombre2 + nombre3) + "<br>");
+        document.write("Nombre: " + resultado[0] + "<br> Apellido 1: " + resultado[1] + "<br> Apellido 2: " + resultado[2] + "<br>");
+        document.write("Nombre de usuario: " + resultado[0].charAt(0) + resultado[1] + resultado[2].charAt(0) + "<br>");
+        document.write("Nombre de usuario 2: " + resultado[0].charAt(0) + resultado[0].charAt(1) + resultado[0].charAt(2) + resultado[1].charAt(0) + resultado[1].charAt(1) + resultado[1].charAt(2) +
+        resultado[2].charAt(0) + resultado[2].charAt(1) + resultado[2].charAt(2));
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 7</h1>
+</body>
+</html>

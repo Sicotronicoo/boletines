@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        var respuesta = prompt("¿Cual fue el primer prsidente de la democracia española?");
+        while(respuesta != "Adolfo Suarez"){
+            var resultado = respuesta.split(" ");
+            if (resultado[0] == "Suarez"){
+                alert("Te falta el nombre.")
+                var respuesta = prompt("¿Cual fue el primer prsidente de la democracia española?");  
+            }            
+            else if(resultado[0] == "Adolfo" && resultado[1] == null){
+                alert("Te falta el apellido.")
+                var respuesta = prompt("¿Cual fue el primer prsidente de la democracia española?");  
+            }
+            else if(resultado[0] != "Adolfo" && resultado[1] != "Suarez"){
+                alert("ERROR. Intentelo de nuevo.")
+                var respuesta = prompt("¿Cual fue el primer prsidente de la democracia española?");  
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Creacion del html-->
+    <h1>Ejercicio 8</h1>
+</body>
+</html>
