@@ -4,14 +4,13 @@ h1{
 }
 .tftable {font-size:12px;
         color:#333333;
-        width:50%; 
+        width:80%; 
         border-width:1px;
         border-color: #729ea5;
         border-collapse: collapse;
         margin: 0 auto; 
 }
-
-.tftable td {font-size:12px;
+td {font-size:12px;
             background-color:#acc8cc;
             border-width: 1px;
             padding: 8px;
@@ -24,7 +23,11 @@ h1{
 .tftable tr {background-color:#d4e3e5;
             height: 30em;}
 img{
-    height:18.625em ;
+    height:10em ;
     width:12.5em ;
+}
+.marcador{
+    width: 80%;;
+    margin-left: 10%;
 }
 
