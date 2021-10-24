@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById(imagenes[0]).style.backgroundColor = "green";
                     document.getElementById(imagenes[1]+'1').style.backgroundColor = "green";
                     imagenes = [];
+                    //
                 }
                 else {
                     this.innerHTML = '<img src="img/interrogacion.png"/>';                    
