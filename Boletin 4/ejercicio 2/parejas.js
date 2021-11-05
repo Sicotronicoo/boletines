@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let item of td) {
         item.addEventListener("click", function () {
             this.innerHTML = '<img src="img/' + this.getAttribute("name")+ '.png" />';
-            var prueba = this.getAttribute("name");
             introducir = imagenes.push(this.getAttribute("name"));
             introducir = imagenesid.push(item.getAttribute("id"));
             if (introducir %2 == 0){
@@ -17,30 +16,32 @@ document.addEventListener("DOMContentLoaded", function () {
                     //document.getElementById(imagenes[0]).id = imagenes[0] + '1';
                     document.getElementById(imagenesid[0]).style.backgroundColor = "green";
                     document.getElementById(imagenesid[1]).style.backgroundColor = "green";
-                    imagenes = [];
                 }
                 else {
-                    //sleep(2000);
+                    sleep(2000);
+                    document.getElementById(imagenesid[1]).img = "src='img/interrogacion.png'";
+                    document.getElementById(imagenesid[0]).img = "src='img/interrogacion.png'";
+                    /*var imagen1 = imagenesid.pop();
+                    var img1 = document.getElementById(imagen1);
+                    img1.src = "img/interrogacion.png";
+                    var imagen2 = imagenesid.pop();
+                    var img2 = document.getElementById(imagen2);
+                    img2.src = "img/interrogacion.png";*/
 
-                    //this.innerHTML = '<img src="img/interrogacion.png"/>';
-                    var ultimaimagen = imagenesid.pop();
-                    var td = document.getElementById(ultimaimagen);
-                     td.innerHTML = '<img src="img/interrogacion.png"/>';                    var ultimaimagen = imagenesid.pop();
-                     var td = document.getElementById(ultimaimagen);
-                      td.innerHTML = '<img src="img/interrogacion.png"/>';
-                    imagenes = [];
-                    imagenesid = [];
                 }
+                imagenes = [];
+                imagenesid = [];
             }
         }
         )
     }
 });
-function sleep(milliseconds) {
+
+ function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
-     if ((new Date().getTime() - start) > milliseconds) {
-      break;
-     }
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
     }
-   }
+} 
