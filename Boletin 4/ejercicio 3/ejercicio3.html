@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <!--<link href="css/estilos.css" rel="stylesheet" type="text/css">-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="comprobacion.js">
     </script>
@@ -12,23 +12,24 @@
     <form action="ejemplo.php" id="formulario">
         <fieldset>
             <legend>Nuevo disco</legend>
-            <label>Nombre del disco: </label><input type="text" id="nombre" size="50">
+            <label class="texto" id="label1">Nombre del disco: </label><input class="caja" type="text" id="nombre" size="50">
             <br><br>
-            <label>Grupo o cantante: </label><input type="text" id="grupoCantante" size="50">
+            <label class="texto" id="label2">Grupo o cantante: </label><input class="caja" type="text" id="grupo" size="50">
             <br><br>
-            <label>Year de publicacion: </label><input type="number" id="publicacion" size="50">
+            <label class="texto" id="label3">Year de publicacion: </label><input class="caja" type="number" id="publicacion" size="50">
             <br><br>
-            <label>Tipo de musica: </label>
-            <select name="tipoMusica">
+            <label class="texto" name="tipo">Tipo de musica: </label>
+            <select class="caja" name="tipoMusica">
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
                 <option value="punk">Punk</option>
                 <option value="indie">Indie</option>
             </select>
             <br><br>
-            <label>Numero de estanteria</label>
-            <input type="number" id="localizacion" size="50" value="Numero de estantería"><br><br>
-            <p>Estado</p>
+            <label class="texto" name="estanteria">Numero de estanteria</label>
+            <input class="caja" type="number" id="localizacion" size="50" value="Numero de estantería"><br><br>
+            <label class="texto" name="estado">Estado</label>
+            <br>
             <input type="radio" id="prestado" value="prestadoSi">Prestado<br>
             <input type="radio" id="prestadoNo" value="prestadoNo">No prestado
             <br><br>

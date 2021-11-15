@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="expresionesRegulares.js">
+    </script>
+</head>
+
+<body>
+    <h1>Ejercicio 4: Expresiones regulares</h1>
+    <form action="ejemplo.php" id="formulario">
+        <fieldset>
+            <legend>Distribucion Alburquerque</legend>
+            <!--obligatorio y con formato dd/mm/aaaa. -->
+            <label>Fecha de creacion. </label><input id="fecha" type="date">
+            <br><br>
+            <!--formado por dos letras en mayúscula, un símbolo y cuatro dígitos -->
+            <label>Cocinero: </label><input type="text" id="cocinero" name="cocinero" size="50">
+            <br><br>
+            <!--dos o tres letras mayúsculas correspondientes
+            al estado, un guión bajo, el nombre de la ciudad en minúsculas, dos puntos, y el
+            código de distrito de 4 digitos (ej. NM_alburquerque:1234).-->
+            <label>Destinatario: </label><input type="text" id="destinatario" size="50">
+            <br><br>
+            <!-- número del 100 al 5000.-->
+            <label>Gramos: </label><input type="number" id="gramos" size="50">
+            <br><br>
+            <!--cantidad en gramos seguida de dos conjuntos de una o dos letras
+            seguidas o no de un número. (ej. 200gC3OH7)-->
+            <label>Composicion: </label><input type="number" id="gramos" size="50">
+            <br><br>
+            <!--
+                -Dos letras: suponemos que el valor de cada letra es del 1 al 26 (no hay ñ ni ll).
+                -Dos dígitos: debe corresponderse con la suma de la primera letra y la segunda:
+                en caso de que sea menor que 10 se pone el 0 delante.
+                -Un guión.
+                -Doce dígitos de cuenta.
+                -Un guión.
+                -Dos dígitos de control: los dos primeros deben ser la suma de los 6 primeros
+                dígitos de la cuenta dividido entre 6 y extrayendo solamente su parte entera; y
+                los dos últimos exactamente igual, pero con los 6 siguientes.
+                Si el número está correcto se colocará en un campo de texto al lado del anterior,
+                pero sin guiones: solamente los números y las letras.
+            -->
+            <label>Numero de cuenta de EEUU: </label><input type="number" id="gramos" size="50">
+            <br><br>
+            <input type="submit" value="Guardar pedido">
+        </fieldset>
+    </form>
+</body>
+
+</html>
