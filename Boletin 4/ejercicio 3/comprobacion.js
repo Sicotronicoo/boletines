@@ -16,6 +16,9 @@ function validarFormulario(evento) {
       document.getElementById("nombre").style.border = "0.3em red solid";
       document.getElementById("label1").style.color = "red";
     }    
+  } else {
+    document.getElementById("nombre").style.border = "0.2em black solid";
+    document.getElementById("label1").style.color = "black";
   }
   var clave = document.getElementById('grupo').value;
   if (clave.length > 20 || clave.length == 0) {
@@ -29,6 +32,9 @@ function validarFormulario(evento) {
       document.getElementById("grupo").style.border = "0.3em red solid";
       document.getElementById("label2").style.color = "red";
     } 
+  }else{
+    document.getElementById("grupo").style.border = "0.2em black solid";
+    document.getElementById("label2").style.color = "black";
   }
 
   var anio = document.getElementById('publicacion').value;
@@ -36,6 +42,9 @@ function validarFormulario(evento) {
     alert('Introduce un year correcto');
     document.getElementById("publicacion").style.border = "0.3em red solid";
     document.getElementById("label3").style.color = "red";
+  }else{
+    document.getElementById("publicacion").style.border = "0.2em black solid";
+    document.getElementById("label3").style.color = "black";
   }
 }
 
