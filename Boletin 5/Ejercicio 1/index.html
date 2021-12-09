@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <!--<link href="css/estilos.css" rel="stylesheet" type="text/css">-->
+
+    <!--<script type="text/javascript" src="valirdarFormulario.js">-->
+    </script>
+</head>
+
+<body>
+    <h1>Ejercicio 1: Formulario Discos</h1>
+    <form id="formulario">
+        <fieldset>
+            <legend>Nuevo disco</legend>
+            <input type="text" id="Nombre" size="50" value="Nombre">
+            <br><br>
+            <input type="text" id="grupoCantante" size="50" value="Grupo de musica o cantante">
+            <br><br>
+            <input type="number" id="publicacion" size="50" value="Year de publicacion">
+            <br><br>
+            <select name="tipoMusica">
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="punk">Punk</option>
+                <option value="indie">Indie</option>
+            </select>
+            <br><br>
+            <input type="number" id="localizacion" size="50" value="Numero de estantería"><br><br>
+            <p>Estado</p>
+            <input type="radio" id="prestado" value="prestadoSi">Prestado<br>
+            <input type="radio" id="prestadoNo" value="prestadoNo">No prestado
+            <br><br>
+            <input type="submit" value="Guardar disco">
+        </fieldset>
+    </form>
+</body>
+
+</html>

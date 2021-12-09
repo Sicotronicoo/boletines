@@ -1,35 +1,44 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
-    <script type="text/javascript" src="parejas.js">
-    </script>
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
 </head>
 
-<body>
-<h1>Ejercicio 2: Parejas</h1>
-<input class="marcador" id="marcador" type="text" name="nombredelacaja" value="0" readonly="readonly">
-<table class="tftable" border="1">
-    <tr>
-        <td id="bart" name="bart"><img src="img/interrogacion.png" /></td>
-        <td id="marge" name="marge"><img src="img/interrogacion.png" /></td>
-        <td id="homer" name="homer"><img src="img/interrogacion.png" /></td>
-        <td id="maggie" name="maggie"><img src="img/interrogacion.png" /></td>
-    </tr>
-    <tr>
-        <td id="lissa" name="lissa"><img src="img/interrogacion.png" /></td>
-        <td id="maggie1" name="maggie"><img src="img/interrogacion.png" /></td>
-        <td id="lissa1" name="lissa"><img src="img/interrogacion.png" /></td>
-        <td id="barney" name="barney"><img src="img/interrogacion.png" /></td>
-    </tr>
-    <tr>
-        <td id="barney1" name="barney"><img src="img/interrogacion.png" /></td>
-        <td id="marge1" name="marge"><img src="img/interrogacion.png" /></td>
-        <td id="bart1" name="bart"><img src="img/interrogacion.png" /></td>
-        <td id="homer1" name="homer"><img src="img/interrogacion.png" /></td>
-    </tr>
-</table>
-</body>
+<body onload="checkCookie()"></body>
 
 </html>

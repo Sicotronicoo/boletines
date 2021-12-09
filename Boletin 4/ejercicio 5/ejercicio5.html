@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <!--<link href="css/estilos.css" rel="stylesheet" type="text/css">-->
+
+    <script type="text/javascript" src="../ejercicio 4/expresionesRegulares.js">
+    </script>
+    <script type="text/javascript" src="cookies.js">
+    </script>
+</head>
+
+<body onload="checkCookie()">
+    <h1>Ejercicio 5: Cookies</h1>
+    <form action="ejemplo.php" id="formulario">
+        <fieldset>
+            <legend>Distribucion Alburquerque</legend>
+            <label>Fecha de creacion. </label><input id="fecha" type="date">
+            <br><br>
+            <label>Cocinero: </label><input type="text" id="cocinero" name="cocinero" size="50">
+            <br><br>
+            <label>Destinatario: </label><input type="text" id="destinatario" size="50">
+            <br><br>
+            <label>Gramos: </label><input type="text" id="gramos" size="50">
+            <br><br>
+            <label>Composicion: </label><input type="text" id="composicion" size="50">
+            <br><br>
+            <label>Numero de cuenta de EEUU: </label><input type="number" id="gramos" size="50">
+            <br><br>
+            <input type="submit" value="Guardar pedido">
+            <br><br>
+            <label>Errores: </label><input id="errores" type="text" value="0" readonly="readonly">
+        </fieldset>
+    </form>
+</body>
+
+</html>
